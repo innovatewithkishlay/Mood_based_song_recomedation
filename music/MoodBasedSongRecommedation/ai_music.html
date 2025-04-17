@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Mood</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-content">
+        <header>
+          <h1>Music Mood</h1>
+          <p>Discover songs based on your mood or preferences</p>
+        </header>
+
+        <div class="search-container">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search for songs, artists, or moods (happy, sad, energetic...)"
+          />
+        </div>
+
+        <div class="mood-container">
+          <h2>Select Your Mood</h2>
+          <div class="mood-cards">
+            <div class="mood-card" data-mood="romantic">❤️ Romantic</div>
+            <div class="mood-card" data-mood="gym">💪 Gym</div>
+            <div class="mood-card" data-mood="traveling">✈️ Traveling</div>
+            <div class="mood-card" data-mood="peace">☮️ Peace</div>
+            <div class="mood-card" data-mood="party">🎉 Party</div>
+            <div class="mood-card" data-mood="study">📚 Study</div>
+            <div class="mood-card" data-mood="rainy">🌧️ Rainy</div>
+            <div class="mood-card" data-mood="sunny">🌞 Sunny</div>
+            <div class="mood-card" data-mood="chill">😎 Chill</div>
+            <div class="mood-card" data-mood="celebration">🥳 Celebration</div>
+            <div class="mood-card" data-mood="heartbreak">😢 Heartbreak</div>
+            <div class="mood-card" data-mood="beach">🏖️ Beach</div>
+            <div class="mood-card" data-mood="adventure">🏔️ Adventure</div>
+            <div class="mood-card" data-mood="classical">🎶 Classical</div>
+            <div class="mood-card" data-mood="rock">🎸 Rock</div>
+          </div>
+        </div>
+
+        <div class="loading">
+          <div class="spinner"></div>
+          <p>Searching for songs...</p>
+        </div>
+
+        <div class="results-grid" id="results-grid">
+          <!-- Song cards will be inserted here -->
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <h3 class="sidebar-title"><i class="fas fa-bolt"></i> Latest Hits</h3>
+        <div id="latest-songs">
+          <!-- Latest songs with images will be dynamically inserted here -->
+        </div>
+      </div>
+    </div>
+
+    <div class="player-container" id="player-container">
+      <div class="player-content">
+        <img
+          src="https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg"
+          alt="Album Art"
+          class="player-album-art"
+          id="player-album-art"
+        />
+        <div class="player-info">
+          <h2 class="player-title" id="player-title">Not Playing</h2>
+          <p class="player-artist" id="player-artist">Music Mood</p>
+        </div>
+        <div class="player-controls">
+          <div class="progress-container">
+            <span class="progress-time" id="current-time">0:00</span>
+            <div class="progress-bar" id="progress-bar">
+              <div class="progress" id="progress"></div>
+            </div>
+            <span class="progress-time" id="duration">0:00</span>
+          </div>
+          <div class="control-buttons">
+            <button class="control-btn prev-btn" id="prev-btn">⏮</button>
+            <button class="control-btn play-pause-btn" id="play-pause-btn">
+              ▶
+            </button>
+            <button class="control-btn next-btn" id="next-btn">⏭</button>
+            <button class="control-btn volume-down-btn" id="volume-down-btn">
+              🔉
+            </button>
+            <button class="control-btn volume-up-btn" id="volume-up-btn">
+              🔊
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="youtube-player"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
